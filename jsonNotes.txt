@@ -1,0 +1,22 @@
+The json file should make sure that for every low cal or high cal, we are displaying the right trait
+
+low cal vegan - veggies
+high cal vegan - vegan mac n cheese
+
+low cal low carb - chicken alfredo
+high cal low carb - hamburgers
+
+low cal low sugar - lasagna
+high cal low sugar - cereal
+
+low cal gluten free - pot pie
+high cal gluten free - dog food
+
+low cal dairy free - chocolate cake
+high cal dairy free - meatballs
+
+low cal high protein - chicken soup
+high cal high protein - waffles
+
+
+(pay no attention to the names and the categoies, I just wanted a name that we would know should pop up)
