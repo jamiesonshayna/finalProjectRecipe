@@ -1,0 +1,134 @@
+[
+    {
+        "recipeName": "Veggies",
+        "directions": "Don't Burn it",
+        "calories": 400,
+        "vegan": true,
+        "lowCarb": false,
+        "lowSugar": false,
+        "glutenFree": false,
+        "dairyFree": false,
+        "highProtein": false
+    },
+    {
+        "recipeName": "Vegan Mac n Cheese",
+        "directions": "Don't Burn it",
+        "calories": 800,
+        "vegan": true,
+        "lowCarb": false,
+        "lowSugar": false,
+        "glutenFree": false,
+        "dairyFree": false,
+        "highProtein": false
+    },
+    {
+        "recipeName": "Chicken Alfredo",
+        "directions": "Don't Burn it",
+        "calories": 400,
+        "vegan": false,
+        "lowCarb": true,
+        "lowSugar": false,
+        "glutenFree": false,
+        "dairyFree": false,
+        "highProtein": false
+    },
+    {
+        "recipeName": "Hamburgers",
+        "directions": "Don't Burn it",
+        "calories": 800,
+        "vegan": false,
+        "lowCarb": true,
+        "lowSugar": false,
+        "glutenFree": false,
+        "dairyFree": false,
+        "highProtein": false
+    },
+    {
+        "recipeName": "Lasagna",
+        "directions": "Don't Burn it",
+        "calories": 400,
+        "vegan": false,
+        "lowCarb": false,
+        "lowSugar": true,
+        "glutenFree": false,
+        "dairyFree": false,
+        "highProtein": false
+    },
+    {
+        "recipeName": "Cereal",
+        "directions": "Don't Burn it",
+        "calories": 800,
+        "vegan": false,
+        "lowCarb": false,
+        "lowSugar": true,
+        "glutenFree": false,
+        "dairyFree": false,
+        "highProtein": false
+    },
+    {
+        "recipeName": "Pot Pie",
+        "directions": "Don't Burn it",
+        "calories": 400,
+        "vegan": false,
+        "lowCarb": false,
+        "lowSugar": false,
+        "glutenFree": true,
+        "dairyFree": false,
+        "highProtein": false
+    },
+    {
+        "recipeName": "Dog Food",
+        "directions": "Don't Burn it",
+        "calories": 800,
+        "vegan": false,
+        "lowCarb": false,
+        "lowSugar": false,
+        "glutenFree": true,
+        "dairyFree": false,
+        "highProtein": false
+    },
+    {
+        "recipeName": "Chocolate Cake",
+        "directions": "Don't Burn it",
+        "calories": 400,
+        "vegan": false,
+        "lowCarb": false,
+        "lowSugar": false,
+        "glutenFree": false,
+        "dairyFree": true,
+        "highProtein": false
+    },
+    {
+        "recipeName": "Meatballs",
+        "directions": "Don't Burn it",
+        "calories": 800,
+        "vegan": false,
+        "lowCarb": false,
+        "lowSugar": false,
+        "glutenFree": false,
+        "dairyFree": true,
+        "highProtein": false
+    },
+    {
+        "recipeName": "Chicken Soup",
+        "directions": "Don't Burn it",
+        "calories": 400,
+        "vegan": false,
+        "lowCarb": false,
+        "lowSugar": false,
+        "glutenFree": false,
+        "dairyFree": false,
+        "highProtein": true
+    },
+    {
+        "recipeName": "Waffles",
+        "directions": "Don't Burn it",
+        "calories": 800,
+        "vegan": false,
+        "lowCarb": false,
+        "lowSugar": false,
+        "glutenFree": false,
+        "dairyFree": false,
+        "highProtein": true
+    }
+]
