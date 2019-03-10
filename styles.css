@@ -1,1 +1,7 @@
 @charset "utf-8";
+
+/* index.html styles */
+
+html {
+	background-color: rgb(232, 228, 228);
+}
