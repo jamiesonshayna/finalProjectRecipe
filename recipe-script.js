@@ -1,16 +1,21 @@
 let values = () => {
 
-    $.getJSON('recipeTry1.json', function(result){
+    $.getJSON('recipieTry1.json', function(result){
     $.each(result, function(index, choice){
-        if()
+        let methods = document.getElementsByName('method');
+        let userLowCal = document.getElementById('calLow').value;
+        if(methods === 'Vegan'&& choice.vegan === true) {
+            if(userLowCal<500 && choice.lowCalories === true) {
+                $('#results').html(choice.recipeName+" "+choice.directions);
+            }
+        }
     });
     });
 
 
 }
 
-$('#checkout').('click', function(){
+$('#checkout').on('click', function(){
     values();
-    document.getElementById('calLow').value;
-    document.getElementById('calHigh').value;
 });
+
