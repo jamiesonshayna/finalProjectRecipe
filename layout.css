@@ -51,10 +51,14 @@ li {
 
 /* index.html layout small tablet, large mobile */
 @media (min-width: 481px) and (max-width: 767px) {
-	
+	html {
+		font-size: 14px;
+	}
 }
 
 /* index.html layout mobile */
 @media (min-width: 320px) and (max-width: 480px) {
-	
+	html {
+		font-size: 12px;
+	}
 }
