@@ -12,24 +12,29 @@
         File: index.html
      -->
     <meta charset="utf-8"/>
-    <title></title>
+    <title>Recipe Finder</title>
+    <link href='layout.css' rel='stylesheet' type='text/css' />
+    <link href='styles.css' rel='stylesheet' type='text/css' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
 </head>
 <body>
     <header>
-        <ul>
-            <li>Yummy</li>
-            <li>Fresh</li>
-            <li>img</li>
-            <li>Easy</li>
-            <li>Organic</li>
+        <ul id='headerUl'>
+            <nav id='headerNav' class='endBar'>
+                <li>Yummy</li>
+                <li>Fresh</li>
+                <li><img src='minitablet.jpg' alt='Mini Tablet Silhouette' /></li>
+                <li>Easy</li>
+                <li>Organic</li>
+            </nav>
         </ul>
     </header>
-    <form>
-        <input type="text" id="calLow" placeholder="Low Calories">
-        <input type="text" id="calHigh" placeholder="High Calories">
+    <form id='specsForm'>
+        <label id='minCalLabel'>min calories: <input type="text" id="calLow" placeholder="Low Calories"></label>
+        <label id='maxCalLabel'>max calories: <input type="text" id="calHigh" placeholder="High Calories"></label>
         <br>
         <br>
-        <label>Please choose one:<br>
+        <label id='radioBtn'>Please choose one:<br>
             <input type="radio"name="method">Vegan
             <input type="radio"name="method">Low-Carb
             <input type="radio"name="method">Low-Sugar
@@ -40,9 +45,17 @@
     </form>
     <button id="checkout">Check Out</button>
     <br>
-    <div id="results"></div>
-<p>something here</p>
+    <div id="results">Random garbage to be removed later but have a visible box now.</div>
+    <footer>
+        <ul id='footerUl'>
+            <nav id='footerNav' class='endBar'>
+                <li><img src='miniinsta.jpg' alt='Instagram Logo' />Instagram @coolRecipies</li>
+                <li><img src='minitwitter.jpg' alt='Twitter Logo' />Twitter @coolRecipies</li>
+                <li>Reach us by email at <a href='mailto:bridget@beeze.com'>bree@beeze.com</a></li>
+            <nav>
+        </ul>
+    </footer>
     <script src='http://code.jquery.com/jquery.js'></script>
-    <script src="recipe-script.js"></script>
+    <script src='recipe-script.js'></script>
 </body>
 </html>
