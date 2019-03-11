@@ -2,7 +2,7 @@
     {
         "recipeName": "Veggies",
         "directions": "Don't Burn it",
-        "calories": 400,
+        "lowCalories": true,
         "vegan": true,
         "lowCarb": false,
         "lowSugar": false,
@@ -13,7 +13,7 @@
     {
         "recipeName": "Vegan Mac n Cheese",
         "directions": "Don't Burn it",
-        "calories": 800,
+        "lowCalories": false,
         "vegan": true,
         "lowCarb": false,
         "lowSugar": false,
@@ -24,7 +24,7 @@
     {
         "recipeName": "Chicken Alfredo",
         "directions": "Don't Burn it",
-        "calories": 400,
+        "lowCalories": true,
         "vegan": false,
         "lowCarb": true,
         "lowSugar": false,
@@ -35,7 +35,7 @@
     {
         "recipeName": "Hamburgers",
         "directions": "Don't Burn it",
-        "calories": 800,
+        "lowCalories": false,
         "vegan": false,
         "lowCarb": true,
         "lowSugar": false,
@@ -46,7 +46,7 @@
     {
         "recipeName": "Lasagna",
         "directions": "Don't Burn it",
-        "calories": 400,
+        "lowCalories": true,
         "vegan": false,
         "lowCarb": false,
         "lowSugar": true,
@@ -57,7 +57,7 @@
     {
         "recipeName": "Cereal",
         "directions": "Don't Burn it",
-        "calories": 800,
+        "lowCalories": false,
         "vegan": false,
         "lowCarb": false,
         "lowSugar": true,
@@ -68,7 +68,7 @@
     {
         "recipeName": "Pot Pie",
         "directions": "Don't Burn it",
-        "calories": 400,
+        "lowCalories": true,
         "vegan": false,
         "lowCarb": false,
         "lowSugar": false,
@@ -79,7 +79,7 @@
     {
         "recipeName": "Dog Food",
         "directions": "Don't Burn it",
-        "calories": 800,
+        "lowCalories": false,
         "vegan": false,
         "lowCarb": false,
         "lowSugar": false,
@@ -90,7 +90,7 @@
     {
         "recipeName": "Chocolate Cake",
         "directions": "Don't Burn it",
-        "calories": 400,
+        "lowCalories": true,
         "vegan": false,
         "lowCarb": false,
         "lowSugar": false,
@@ -101,7 +101,7 @@
     {
         "recipeName": "Meatballs",
         "directions": "Don't Burn it",
-        "calories": 800,
+        "lowCalories": false,
         "vegan": false,
         "lowCarb": false,
         "lowSugar": false,
@@ -112,7 +112,7 @@
     {
         "recipeName": "Chicken Soup",
         "directions": "Don't Burn it",
-        "calories": 400,
+        "lowCalories": true,
         "vegan": false,
         "lowCarb": false,
         "lowSugar": false,
@@ -123,7 +123,7 @@
     {
         "recipeName": "Waffles",
         "directions": "Don't Burn it",
-        "calories": 800,
+        "lowCalories": false,
         "vegan": false,
         "lowCarb": false,
         "lowSugar": false,
