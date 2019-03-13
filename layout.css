@@ -1,64 +1,15 @@
 @charset "utf-8";
 
-header, form, button, div, footer {
-	border: 3px solid black;
+/*div {
+	border: 1px solid gray;
 }
-li, label {
+li {
 	border: 1px solid red;
 }
-ul{
+label {
 	border: 1px solid yellow;
 }
-
-/* index.html layout desktop */
-
-	/* ensures padding and border are included in total width/height of element */
-* {
-	box-sizing: border-box;
+form {
+	border: 1px solid green;
 }
-
-ul {
-		/* removes bullets from list items */
-	list-style-type: none;
-		/* remove browser default settings */
-	margin: 0;
-	padding: 0;
-	position: fixed;
-	width: 100%;
-	overflow: hidden;
-}
-
-#headerUl {
-	top: 0;
-}
-
-#footerUl {
-	bottom: 0;
-}
-
-li {
-		/* horizontal li, positioned top left most possible */
-	float: left;
-		/* horizontal li, positioned bottom left most possible */
-	/*display: inline-block */
-}
-
-/* index.html layout Tablet */
-@media (min-width: 768px) and (max-width: 1024px) {
-	
-}
-
-
-/* index.html layout small tablet, large mobile */
-@media (min-width: 481px) and (max-width: 767px) {
-	html {
-		font-size: 14px;
-	}
-}
-
-/* index.html layout mobile */
-@media (min-width: 320px) and (max-width: 480px) {
-	html {
-		font-size: 12px;
-	}
-}
+*/
