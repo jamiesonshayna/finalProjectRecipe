@@ -47,3 +47,16 @@ li, p {
 /*#specsForm, #results {
 	border: 5px solid gray;
 }*/
+
+.hidden {
+	display: none;
+}
+
+.errorSpan {
+	color: darkred;
+}
+
+.errorInput {
+	border: 2px solid darkred;
+	background-color: #ffcccc;
+}

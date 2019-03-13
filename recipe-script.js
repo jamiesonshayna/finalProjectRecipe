@@ -1,11 +1,40 @@
+let calValidate = (lowCal, highCal) => {
+    let btn = document.getElementById("checkout");
+    btn.disabled = true;
+
+    if(highCal<=0 || highCal<lowCal || isNaN(highCal)) {
+        document.getElementById("calHigh").classList = "errorInput";
+        document.getElementById("errorInput2").classList = "errorSpan";
+    }
+
+    if(lowCal<0 || isNaN(lowCal) || lowCal<highCal) {
+        document.getElementById("calLow").classList = "errorInput";
+        document.getElementById("errorInput1").classList = "errorSpan";
+    }
+    if(highCal>0 && highCal>lowCal) {
+        btn.disabled = false;
+        document.getElementById("calHigh").classList.remove("errorInput");
+        document.getElementById("errorInput2").classList = "hidden";
+    }
+    
+    if(lowCal>=0 && lowCal<highCal) {
+        btn.disabled = false;
+        document.getElementById("calLow").classList.remove("errorInput");
+        document.getElementById("errorInput1").classList = "hidden";
+    }
+}
+
+
+
 let values = () => {
     $.getJSON('recipieTry1.json', function(result){
         $.each(result, function(index, choice){
                 /* get input min and max calories */
             let userHighCal = document.getElementById('calHigh').value;
             // let userLowCal = document.getElementById('calLow').value;
-            var validLowCal;
             
+            let validLowCal;
+
             if(userHighCal < 500) {
                 validLowCal = true;
             }
@@ -23,6 +52,7 @@ let values = () => {
 
             // get the output so that it can be reused with just a variable
             let output = "<h3>Recipe: "+choice.recipeName+"<br>Directions: "+choice.directions+"</h3>";
+
 
             if(radioVegan.checked && validLowCal == true) {
                 if(choice.vegan == "true" && choice.lowCalories == "true")
@@ -75,6 +105,10 @@ let values = () => {
         });
     });
 }
+
+$('#calInputs').on("mouseleave", function() {
+    calValidate(document.getElementById("calLow").value, document.getElementById("calHigh").value);
+});
 
 $('#checkout').on('click', function(){
     values();
