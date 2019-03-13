@@ -4,9 +4,10 @@ let values = () => {
                 /* get input min and max calories */
             let userHighCal = document.getElementById('calHigh').value;
             // let userLowCal = document.getElementById('calLow').value;
+            var validLowCal;
             
             if(userHighCal < 500) {
-                var validLowCal = true;
+                validLowCal = true;
             }
             if(userHighCal > 500) {
                 validLowCal = false;
