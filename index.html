@@ -56,8 +56,12 @@
             <div class="col-sm-1"></div>
             <div class="col-sm-4 well well-lg" id='specsForm'>
                 <form>
-                    <label id='minCalLabel'>min calories: <input type="number" step='1.0' id="calLow"></label>
-                    <label id='maxCalLabel'>max calories: <input type="number" step='1.0' id="calHigh"></label>
+                    <div id="calInputs">
+                    <label id='minCalLabel'>calories: <input type="number" step='1.0' id="calLow" placeholder="min"></label>
+                    <span id="errorInput1" class="hidden">required</span>
+                    <label id='maxCalLabel'>calories: <input type="number" step='1.0' id="calHigh" placeholder="max"></label>
+                    <span id="errorInput2" class="hidden">required</span>
+                    </div>
                     <br>
                     <br>
                     <label id='radioBtn'>Please choose one:<br>
