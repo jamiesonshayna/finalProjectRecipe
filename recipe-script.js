@@ -9,7 +9,7 @@ let values = () => {
                 var validLowCal = true;
             }
             if(userHighCal > 500) {
-                var validLowCal = false;
+                validLowCal = false;
             }
             
                 /* get radio button checked 'on' or not */
