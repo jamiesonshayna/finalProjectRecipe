@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <!--
@@ -13,50 +12,106 @@
      -->
     <meta charset="utf-8"/>
     <title>Recipe Finder</title>
+        <!-- Latest compiled and minified CSS Bootstrap layout library -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <!-- our layout css -->
     <link href='layout.css' rel='stylesheet' type='text/css' />
+        <!-- our styles css -->
     <link href='styles.css' rel='stylesheet' type='text/css' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
 </head>
 <body>
-    <header>
-        <ul id='headerUl'>
-            <nav id='headerNav' class='endBar'>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-2">
                 <li>Yummy</li>
+            </div>
+            <div class="col-xs-2">
                 <li>Fresh</li>
-                <li><img src='miniinsta.jpg' alt='Mini Tablet Silhouette' /></li>
+            </div>
+            <div class="col-xs-4">
+                <img src='miniinsta.jpg' alt='Mini Tablet Silhouette' class="center-block"/>
+            </div>
+            <div class="col-xs-2">
                 <li>Easy</li>
+            </div>
+            <div class="col-xs-2">
                 <li>Organic</li>
-            </nav>
-        </ul>
-    </header>
-    <h1>Come Eat With Us</h1>
-    <form id='specsForm'>
-        <label id='minCalLabel'>min calories: <input type="number" step='1.0' id="calLow" placeholder="400"></label>
-        <label id='maxCalLabel'>max calories: <input type="number" step='1.0' id="calHigh" placeholder="500"></label>
-        <br>
-        <br>
-        <label id='radioBtn'>Please choose one:<br>
-            <input type="radio"name="method" value="Vegan" id='veganRad'>Vegan
-            <input type="radio"name="method" value="Low-Carb" id='lowCarbRad'>Low-Carb
-            <input type="radio"name="method" value="Low-Sugar" id='lowSugarRad'>Low-Sugar
-            <input type="radio"name="method" value="Gluten-Free" id='glutenFreeRad'>Gluten-Free
-            <input type="radio"name="method" value="Dairy-Free" id='dairyFreeRad'>Dairy-Free
-            <input type="radio"name="method" value="High-Protein" id='highProteinRad'>High-Protein
-        </label>
-    </form>
-    <button id="checkout">Check Out</button>
-    <br>
-    <div id="results">Random garbage to be removed later but have a visible box now.</div>
-    <footer>
-        <ul id='footerUl'>
-            <nav id='footerNav' class='endBar'>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Come Eat With Us</h1>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-5 well well-lg" id='specsForm'>
+                <form>
+                    <label id='minCalLabel'>min calories: <input type="number" step='1.0' id="calLow"></label>
+                    <label id='maxCalLabel'>max calories: <input type="number" step='1.0' id="calHigh"></label>
+                    <br>
+                    <br>
+                    <label id='radioBtn'>Please choose one:<br>
+                        <label class="radio-inline"><input type="radio"name="method" value="Vegan" id='veganRad'>Vegan</label>
+                        <label class="radio-inline"><input type="radio"name="method" value="Low-Carb" id='lowCarbRad'>Low-Carb</label>
+                        <label class="radio-inline"><input type="radio"name="method" value="Low-Sugar" id='lowSugarRad'>Low-Sugar</label>
+                        <br>
+                        <label class="radio-inline"><input type="radio"name="method" value="Gluten-Free" id='glutenFreeRad'>Gluten-Free</label>
+                        <label class="radio-inline"><input type="radio"name="method" value="Dairy-Free" id='dairyFreeRad'>Dairy-Free</label>
+                        <label class="radio-inline"><input type="radio"name="method" value="High-Protein" id='highProteinRad'>High-Protein</label>
+                    </label>
+                    <br>
+                    <br>
+                    <label id='mealBtn'>Please choose one:<br>
+                         <label class="radio-inline"><input type="radio" name="mealType" value="Snack" id="snackRad">Snack</label>
+                         <label class="radio-inline"><input type="radio" name="mealType" value="Breakfast" id="breakfastRad">Breakfast</label>
+                         <label class="radio-inline"><input type="radio" name="mealType" value="Lunch" id="lunchRad">Lunch</label>
+                         <label class="radio-inline"><input type="radio" name="mealType" value="Dinner" id="dinnerRad">Dinner</label>
+                    </label>
+                </form>
+                <div class="col-sm-12">
+                    <button id="checkout" type="button" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-search"</span> Check Out</button>
+                </div>
+            </div>
+            <div id="results" class="col-sm-6 col-sm-offset-1">
+                Random garbage to be removed later but have a visible box now.
+                Blah blah blah blah blah blah blah blah blah blah blah blah.
+                Blah blah blah blah blah blah blah blah blah blah blah blah.
+                Blah blah blah blah blah blah blah blah blah blah blah blah.
+                Blah blah blah blah blah blah blah blah blah blah blah blah.
+                Blah blah blah blah blah blah blah blah blah blah blah blah.
+                Blah blah blah blah blah blah blah blah blah blah blah blah.
+                Blah blah blah blah blah blah blah blah blah blah blah blah.
+                Blah blah blah blah blah blah blah blah blah blah blah blah.
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-xs-4">
                 <li><img src='miniinsta.jpg' alt='Instagram Logo' />Instagram @coolRecipies</li>
+            </div>
+             <div class="col-xs-4">   
                 <li><img src='minitwitter.jpg' alt='Twitter Logo' />Twitter @coolRecipies</li>
+             </div>
+             <div class="col-xs-4">
                 <li>Reach us by email at <a href='mailto:bridget@beeze.com'>bree@beeze.com</a></li>
-            <nav>
-        </ul>
-    </footer>
-  <script src='http://code.jquery.com/jquery.js'></script>
+            </div>
+        </div>
+    </div>
+    
+        <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+     
+        <!-- jQuery Library **not for Bootstrap -->
+    <script src='http://code.jquery.com/jquery.js'></script>
+    
+        <!-- Javascript + jQuery written for our script -->
     <script src='recipe-script.js'></script>
 </body>
 </html>
