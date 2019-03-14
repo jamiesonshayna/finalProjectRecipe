@@ -2,29 +2,26 @@ let calValidate = (lowCal, highCal) => {
     let btn = document.getElementById("checkout");
     btn.disabled = true;
 
-    if(highCal<=0 || highCal<lowCal || isNaN(highCal)) {
-        document.getElementById("calHigh").classList = "errorInput";
-        document.getElementById("errorInput2").classList = "errorSpan";
-    }
-
-    if(lowCal<0 || isNaN(lowCal) || lowCal<highCal) {
+    if(lowCal<0 || isNaN(lowCal) || lowCal>highCal) {
         document.getElementById("calLow").classList = "errorInput";
         document.getElementById("errorInput1").classList = "errorSpan";
-    }
-    if(highCal>0 && highCal>lowCal) {
-        btn.disabled = false;
-        document.getElementById("calHigh").classList.remove("errorInput");
-        document.getElementById("errorInput2").classList = "hidden";
-    }
-    
-    if(lowCal>=0 && lowCal<highCal) {
-        btn.disabled = false;
+    } else {
         document.getElementById("calLow").classList.remove("errorInput");
         document.getElementById("errorInput1").classList = "hidden";
     }
+    
+    if(highCal<=0 || highCal<lowCal || isNaN(highCal)) {
+        document.getElementById("calHigh").classList = "errorInput";
+        document.getElementById("errorInput2").classList = "errorSpan";
+    } else {
+        document.getElementById("calHigh").classList.remove("errorInput");
+        document.getElementById("errorInput2").classList = "hidden";
+    }
+
+    if((highCal>0 && highCal>lowCal) && (lowCal>=0 && lowCal<highCal)) {
+        btn.disabled = false;
+    }
 }
-
-
 
 let values = () => {
     $.getJSON('recipieTry1.json', function(result){
