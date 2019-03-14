@@ -1,7 +1,7 @@
 let calValidate = (lowCal, highCal) => {
     let btn = document.getElementById("checkout");
     btn.disabled = true;
-
+// for push
     if(lowCal<0 || isNaN(lowCal) || lowCal>highCal) {
         document.getElementById("calLow").classList = "errorInput";
         document.getElementById("errorInput1").classList = "errorSpan";
