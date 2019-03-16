@@ -6,7 +6,7 @@
         Shayna Jamieson
         Bridget Black
         2019-03-09
-        Last Updated: 2019-03-09
+        Last Updated: 2019-03-16
 
         File: index.html
      -->
@@ -22,9 +22,11 @@
     <link href='layout.css' rel='stylesheet' type='text/css' />
         <!-- our styles css -->
     <link href='styles.css' rel='stylesheet' type='text/css' />
+        <!-- viewport for mulitple devices -->
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
 </head>
 <body>
+        <!-- Header: Large view contains Jumbotron, row: 1 col: 5 -->
     <div class="container-fluid">
         <div class="row header jumbotron">
             <div class="col-sm-2">
@@ -45,6 +47,8 @@
         </div>
     </div>
     
+        <!-- Banner: Large view: no adronments Med-XSmall view: replaces header
+                row: 1 col: 3 -->
     <div class="container-fluid bannerStyles">    
         <div class="row">
             <div class="col-sm-1 col-xs-0"></div>
@@ -57,11 +61,15 @@
         </div>
     </div>
     
-    <div class="containter containerStyle">    
+        <!-- Form/Tablet: Large-Med view: row: 1 col: 5
+                            Small-XSmall view: row:2 col:3 -->
+    <div class="containter containerStyle">
         <div class="row">
             <div class="col-md-1"></div>
+                <!-- Form Div -->
             <div class="col-md-4 well well-lg" id='specsForm'>
                 <form>
+                        <!-- Min and Max Calorie Input Fields -->
                     <div id="calInputs">
                         <label id='minCalLabel'>calories: <input type="number" step='1.0' id="calLow" placeholder="min"></label>
                         <span id="errorInput1" class="hidden">required</span>
@@ -70,6 +78,7 @@
                     </div>
                     <br>
                     <br>
+                        <!-- Food type choices: Vegan, Gluten-Free, etc -->
                     <label id='radioBtn'>Please choose one:<br>
                         <div class="row center-block">
                             <div class="col-xs-4">
@@ -97,7 +106,9 @@
                     </label>
                     <br>
                     <br>
-                    
+                 
+                    <!-- Meal size choices: Breakfast, Lunch, Dinner
+                            Check Out Button -->   
                 <div class="row center-block no-gutter">
                     <div class="col-sm-8">
                         <label id='mealBtn'>Please choose one:<br>
@@ -121,6 +132,8 @@
                 </div>
                 </form>
             </div>
+        
+                <!-- Tablet enclosed Div: food search results -->
             <div id="results" class="col-md-5 col-md-offset-1">
                 Please select food types and check out!
             </div>
@@ -128,9 +141,11 @@
         </div>
     </div>
     
+        <!-- Footer: row: 1 col: 2 -->
     <footer class="footer">
         <div class="container-fluid">    
             <div class="row">
+                    <!-- Shayna's Information column -->
                 <div class="col-xs-6 btn-group">
                     <img src="shayna.jpg" alt="Shayna Jamieson image"/>
                     <a href="https://github.com/jamiesonshayna"><button class="btn btn-social-icon btn-github fa fa-github"></button></a>  
@@ -138,6 +153,7 @@
                     <a href="https://www.linkedin.com/in/shayna-jamieson-153278112/"><button class="btn btn-social-icon btn-linkedin fa fa-lg fa-linkedin"></button></a>
                 </div>
                 
+                    <!-- Bridget's Information column -->
                 <div class="col-xs-6 btn-group text-right">
                     <a href="https://www.linkedin.com/in/bridget-black-337942116/"><button class="btn btn-social-icon btn-linkedin fa fa-lg fa-linkedin"></button></a>
                     <a href="mailto:bsblack12@gmail.com"><button class="btn btn-social-icon btn-google fa fa-google"></button></a>

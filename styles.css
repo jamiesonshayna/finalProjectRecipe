@@ -1,6 +1,16 @@
 @charset "utf-8";
 
-/* index.html styles */
+/*
+	Final Project Recipe Getter
+    Shayna Jamieson
+    Bridget Black
+    2019-03-09
+    Last Updated: 2019-03-16
+
+	File: styles.css	
+
+    Associated File: index.html
+*/
 
 /* Bootstrap sizes:
 		xs < 768px		container width: none(auto)
@@ -11,43 +21,52 @@ container width = # + column width + gutter width
 */
 
 html, body {
+		/* white */
 	background-color: #fff;
 }
 
 .header {
+		/* Darker Yellow */
 	background-color: #fdfd96;
+		/* Brown-Grey */
 	color: #73716d;
 }
 
 h1 {
-	list-style-type: none;
 	text-align: center;
+		/* Imported Font-Family, link in index.html */
 	font: 400 130px/0.8 'Great Vibes', Helvetica, sans-serif;
 	color: black;
 	text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
 	font-size: 36px;
 }
 
+	/* For Med-XSmall viewport */
 @media only screen and (max-width: 1199px) {
 	.header {
 		display: none;
 	}
+		/* Darker Yellow */
 	.bannerStyles {
 		background-color: #fdfd96;
 	}
 }
 
+	/* For Large viewport */
 @media only screen and (min-width: 1200px) {
+		/* Hide image in banner */
 	#bannerImg {
 		display: none;
 	}
 }
 
+	/* Give banner a small horizontal line across bottom + padding */
 .bannerStyles {
 	border-bottom: 1px ridge;
 	padding-bottom: 10px;
 }
 
+	/* Form + Tablet */
 .containerStyle {
 	margin: 0px auto;
 	padding: 50px 0px;
@@ -58,17 +77,21 @@ h1 {
 }
 
 .footer {
+		/* Lighter Yellow */
 	background-color: #fefee1;
 	margin: 0px auto;
 	padding: 20px 0px;
 }
 
+	/*  */
 .btn-default {
+		/* Redish Grey */
 	background: rgb(232, 228, 228);
 	box-shadow: 1px 2px 5px #000000;
 }
 
 .btn-default:hover {
+		/* White */
 	background: #fff;
 }
 
@@ -85,6 +108,7 @@ h1 {
 	background-color: #ffcccc;
 }
 
+	/* Font Awesom Bootstrap for Icons */
 .fa {
   padding: 20px;
   font-size: 20px;
@@ -94,42 +118,50 @@ h1 {
   margin: 5px 2px;
 }
 
+	/* Font Awesom Bootstrap for Icons */
 .fa:hover {
     opacity: 0.7;
 }
 
+	/* Font Awesom Bootstrap for Icons */
 .fa-linkedin {
   background: #007bb5;
   color: white;
 }
 
+	/* Font Awesom Bootstrap for Icons */
 .fa-google {
   background: #dd4b39;
   color: white;
 }
 
+	/* Font Awesom Bootstrap for Icons */
 .fa-github {
 	background: #24292e;
 	color: white;
 }
 
+	/* Shayna and Bridget's Images */
 img {
 	width: 120px;
 	border: 1px solid black;
 	border-radius: 50%;
 }
 
+	/* Control Egg image */
 #headerImg, #bannerImg {
 	width: 150px;
 	border: none;
 	border-radius: none;
 }
 
+/* Reduce size of Egg image inside banner */
 #bannerImg {
 	width: 75px;
 	padding-top: 15px;
 }
 
+	/* Tablet Div */
 #results {
 	height: 700px;
 	overflow-y: scroll;
