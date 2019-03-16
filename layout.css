@@ -1,14 +1,14 @@
 @charset "utf-8";
-/**/
-/*div {*/*/
+
+/*div {*/
 /*	border: 1px solid gray;*/
 /*}*/
-/*li, a, p {*/
+/*a, h1 {*/
 /*	border: 1px solid red;*/
 /*}*/
 /*label {*/
 /*	border: 1px solid yellow;*/
 /*}*/
-/*form, button {*/
+/*form, button, h2 {*/
 /*	border: 1px solid green;*/
 /*}*/
