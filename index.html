@@ -16,109 +16,132 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <!-- Bootstrap social media and font -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+        <!-- Font for header -->
+    <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'> 
         <!-- our layout css -->
     <link href='layout.css' rel='stylesheet' type='text/css' />
         <!-- our styles css -->
     <link href='styles.css' rel='stylesheet' type='text/css' />
-        <!-- Font for header -->
-    <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
 </head>
 <body>
     <div class="container-fluid">
         <div class="row header jumbotron">
-            <div class="col-xs-2">
+            <div class="col-sm-2">
                 <h1>Yummy</h1>
             </div>
-            <div class="col-xs-2">
+            <div class="col-sm-2">
                 <h1>Fresh</h1>
             </div>
-            <div class="col-xs-4">
+            <div class="col-sm-4">
                 <img id='headerImg' src='egg.png' alt='Egg in Skillet' class="center-block"/>
             </div>
-            <div class="col-xs-2">
+            <div class="col-sm-2">
                 <h1>Easy</h1>
             </div>
-            <div class="col-xs-2">
+            <div class="col-sm-2">
                 <h1>Organic</h1>
             </div>
         </div>
     </div>
     
-    <div class="container-fluid rowStyles">    
+    <div class="container-fluid bannerStyles">    
         <div class="row">
-            <div class="col-xs-1"></div>
-            <div class="col-xs-4">
+            <div class="col-sm-1 col-xs-0"></div>
+            <div class="col-sm-5 col-xs-6">
                 <h2>Come Eat With Us</h2>
             </div>
-            <div class="col-xs-7"></div>
+            <div class="col-xs-6">
+                <img id='bannerImg' src='egg.png' alt='Egg in Skillet'/>
+            </div>
         </div>
     </div>
     
     <div class="containter containerStyle">    
         <div class="row">
-            <div class="col-sm-1"></div>
-            <div class="col-sm-4 well well-lg" id='specsForm'>
+            <div class="col-md-1"></div>
+            <div class="col-md-4 well well-lg" id='specsForm'>
                 <form>
                     <div id="calInputs">
-                    <label id='minCalLabel'>calories: <input type="number" step='1.0' id="calLow" placeholder="min"></label>
-                    <span id="errorInput1" class="hidden">required</span>
-                    <label id='maxCalLabel'>calories: <input type="number" step='1.0' id="calHigh" placeholder="max"></label>
-                    <span id="errorInput2" class="hidden">required</span>
+                        <label id='minCalLabel'>calories: <input type="number" step='1.0' id="calLow" placeholder="min"></label>
+                        <span id="errorInput1" class="hidden">required</span>
+                        <label id='maxCalLabel'>calories: <input type="number" step='1.0' id="calHigh" placeholder="max"></label>
+                        <span id="errorInput2" class="hidden">required</span>
                     </div>
                     <br>
                     <br>
                     <label id='radioBtn'>Please choose one:<br>
-                        <label class="radio-inline"><input type="radio"name="method" value="Vegan" id='veganRad'>Vegan</label>
-                        <label class="radio-inline"><input type="radio"name="method" value="Low-Carb" id='lowCarbRad'>Low-Carb</label>
-                        <label class="radio-inline"><input type="radio"name="method" value="Low-Sugar" id='lowSugarRad'>Low-Sugar</label>
-                        <br>
-                        <label class="radio-inline"><input type="radio"name="method" value="Gluten-Free" id='glutenFreeRad'>Gluten-Free</label>
-                        <label class="radio-inline"><input type="radio"name="method" value="Dairy-Free" id='dairyFreeRad'>Dairy-Free</label>
-                        <label class="radio-inline"><input type="radio"name="method" value="High-Protein" id='highProteinRad'>High-Protein</label>
+                        <div class="row center-block">
+                            <div class="col-xs-4">
+                                <label class="radio-inline"><input type="radio"name="method" value="Vegan" id='veganRad'>Vegan</label>
+                            </div>
+                            <div class="col-xs-4">
+                                <label class="radio-inline"><input type="radio"name="method" value="Low-Carb" id='lowCarbRad'>Low-Carb</label>
+                            </div>
+                            <div class="col-xs-4">
+                                <label class="radio-inline"><input type="radio"name="method" value="Low-Sugar" id='lowSugarRad'>Low-Sugar</label>
+                            </div>
+                            <br>
+                        </div>
+                        <div class="row center-block">
+                            <div class="col-xs-4">
+                                <label class="radio-inline"><input type="radio"name="method" value="Gluten-Free" id='glutenFreeRad'>Gluten-Free</label>
+                            </div>
+                            <div class="col-xs-4">
+                                <label class="radio-inline"><input type="radio"name="method" value="Dairy-Free" id='dairyFreeRad'>Dairy-Free</label>
+                            </div>
+                            <div class="col-xs-4">
+                                <label class="radio-inline"><input type="radio"name="method" value="High-Protein" id='highProteinRad'>High-Protein</label>
+                            </div>
+                        </div>
                     </label>
                     <br>
                     <br>
-                    <label id='mealBtn'>Please choose one:<br>
-                         <label class="radio-inline"><input type="radio" name="mealType" value="Breakfast" id="breakfastRad">Breakfast</label>
-                         <label class="radio-inline"><input type="radio" name="mealType" value="Lunch" id="lunchRad">Lunch</label>
-                         <label class="radio-inline"><input type="radio" name="mealType" value="Dinner" id="dinnerRad">Dinner</label>
-                    </label>
-                </form>
-                <div class="col-sm-12">
-                    <button id="checkout" type="button" class="btn btn-default btn-sm">
-                    <span class="glyphicon glyphicon-search"</span> Check Out</button>
+                    
+                <div class="row center-block no-gutter">
+                    <div class="col-sm-8">
+                        <label id='mealBtn'>Please choose one:<br>
+                            <div class="row center-block">
+                                <div class="col-xs-12">
+                                    <label class="radio-inline"><input type="radio" name="mealType" value="Breakfast" id="breakfastRad">Breakfast</label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <label class="radio-inline"><input type="radio" name="mealType" value="Lunch" id="lunchRad">Lunch</label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <label class="radio-inline"><input type="radio" name="mealType" value="Dinner" id="dinnerRad">Dinner</label>
+                                </div>
+                            </div>
+                        </label>
+                        </div>
+                        <div class="col-sm-4">
+                        <button id="checkout" type="button" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-search"</span> Check Out</button>
+                    </div>
                 </div>
-            <div class="col-sm-1"></div>
+                </form>
             </div>
-            <div id="results" class="col-sm-5 col-sm-offset-1">
-                Random garbage to be removed later but have a visible box now.
-                Blah blah blah blah blah blah blah blah blah blah blah blah.
-                Blah blah blah blah blah blah blah blah blah blah blah blah.
-                Blah blah blah blah blah blah blah blah blah blah blah blah.
-                Blah blah blah blah blah blah blah blah blah blah blah blah.
-                Blah blah blah blah blah blah blah blah blah blah blah blah.
-                Blah blah blah blah blah blah blah blah blah blah blah blah.
-                Blah blah blah blah blah blah blah blah blah blah blah blah.
-                Blah blah blah blah blah blah blah blah blah blah blah blah.
+            <div id="results" class="col-md-5 col-md-offset-1">
+                Please select food types and check out!
             </div>
+            <div class="col-md-1"></div>
         </div>
     </div>
     
     <footer class="footer">
         <div class="container-fluid">    
             <div class="row">
-                
                 <div class="col-xs-6 btn-group">
                     <img src="shayna.jpg" alt="Shayna Jamieson image"/>
                     <a href="https://github.com/jamiesonshayna"><button class="btn btn-social-icon btn-github fa fa-github"></button></a>  
                     <a href="mailto:jamieson.shayna@gmail.com"><button class="btn btn-social-icon btn-google fa fa-google"></button></a>
                     <a href="https://www.linkedin.com/in/shayna-jamieson-153278112/"><button class="btn btn-social-icon btn-linkedin fa fa-lg fa-linkedin"></button></a>
                 </div>
+                
                 <div class="col-xs-6 btn-group text-right">
-                     <a href="https://www.linkedin.com/in/bridget-black-337942116/"><button class="btn btn-social-icon btn-linkedin fa fa-lg fa-linkedin"></button></a>
+                    <a href="https://www.linkedin.com/in/bridget-black-337942116/"><button class="btn btn-social-icon btn-linkedin fa fa-lg fa-linkedin"></button></a>
                     <a href="mailto:bsblack12@gmail.com"><button class="btn btn-social-icon btn-google fa fa-google"></button></a>
-                    <a href="https://github.com/BlackRabbit12"><button class="btn btn-social-icon btn-github fa fa-github"></button></a> 
+                    <a href="https://github.com/BlackRabbit12"><button class="btn btn-social-icon btn-github fa fa-github"></button></a>
                     <img src="bridget.png" alt="Bridget Black image"/>
                 </div>
             </div>

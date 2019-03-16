@@ -2,6 +2,14 @@
 
 /* index.html styles */
 
+/* Bootstrap sizes:
+		xs < 768px		container width: none(auto)
+		sm < 992px		container width: 750px
+		md < 1200px		container width: 970px
+		lg >= 1200px	container width: 1170px
+container width = # + column width + gutter width
+*/
+
 html, body {
 	background-color: #fff;
 }
@@ -9,25 +17,6 @@ html, body {
 .header {
 	background-color: #fdfd96;
 	color: #73716d;
-}
-
-.rowStyles {
-	border-bottom: 1px ridge;
-	padding-bottom: 10px;
-}
-
-.containerStyle {
-	margin: 0px auto;
-	padding: 50px 0px;
-	font-family: "Anonymous Pro";
-	font-size: 24px;
-	letter-spacing: .1em;
-}
-
-.footer {
-	background-color: #fefee1;
-	margin: 0px auto;
-	padding: 20px 0px;
 }
 
 h1 {
@@ -39,6 +28,41 @@ h1 {
 	font-size: 36px;
 }
 
+@media only screen and (max-width: 1199px) {
+	.header {
+		display: none;
+	}
+	.bannerStyles {
+		background-color: #fdfd96;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	#bannerImg {
+		display: none;
+	}
+}
+
+.bannerStyles {
+	border-bottom: 1px ridge;
+	padding-bottom: 10px;
+}
+
+.containerStyle {
+	margin: 0px auto;
+	padding: 50px 0px;
+	font-family: "Anonymous Pro";
+	font-size: 24px;
+	letter-spacing: .1em;
+	overflow: hidden;
+}
+
+.footer {
+	background-color: #fefee1;
+	margin: 0px auto;
+	padding: 20px 0px;
+}
+
 .btn-default {
 	background: rgb(232, 228, 228);
 	box-shadow: 1px 2px 5px #000000;
@@ -47,10 +71,6 @@ h1 {
 .btn-default:hover {
 	background: #fff;
 }
-
-/*#specsForm, #results {
-	border: 5px solid gray;
-}*/
 
 .hidden {
 	display: none;
@@ -99,8 +119,24 @@ img {
 	border-radius: 50%;
 }
 
-#headerImg {
+#headerImg, #bannerImg {
 	width: 150px;
 	border: none;
 	border-radius: none;
+}
+
+#bannerImg {
+	width: 75px;
+	padding-top: 15px;
+}
+
+#results {
+	height: 700px;
+	overflow-y: scroll;
+		/* 575px wide, 810px height */
+	border: 40px solid transparent;
+	padding: 15px;
+	-webkit-border-image: url(tablet_final_project.png) 60;
+	-o-border-image: url(tablet_final_project.png) 60;
+	border-image: url(tablet_final_project.png) 60;
 }
