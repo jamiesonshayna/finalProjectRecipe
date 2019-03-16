@@ -29,7 +29,7 @@ let values = () => {
                 /* get input min and max calories */
             let userHighCal = document.getElementById('calHigh').value;
             // let userLowCal = document.getElementById('calLow').value;
-            
+            //hello delete me
             let validLowCal;
 
             if(userHighCal < 500) {
