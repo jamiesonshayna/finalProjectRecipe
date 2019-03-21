@@ -103,6 +103,10 @@ let values = () => {
     });
 }
 
+//$('.calories').on("mouseleave", event => {
+//   $(event.currentTarget).calValidate(document.getElementById("calLow").value, document.getElementById("calHigh").value);
+//});
+
 $('#calInputs').on("mouseleave", function() {
     calValidate(document.getElementById("calLow").value, document.getElementById("calHigh").value);
 });
