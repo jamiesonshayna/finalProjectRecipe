@@ -161,6 +161,15 @@ img {
 	padding-top: 15px;
 }
 
+#divImg {
+	width: 1000px;
+	height: auto;
+	overflow: hidden;
+	border: none;
+	border-radius: 0%;
+	max-width: 100%;
+}
+
 	/* Tablet Div */
 #results {
 	height: 700px;
@@ -171,7 +180,5 @@ img {
 	-webkit-border-image: url(tablet_final_project.png) 60;
 	-o-border-image: url(tablet_final_project.png) 60;
 	border-image: url(tablet_final_project.png) 60;
-	background-image: url("food.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
+	text-align: center;
 }
