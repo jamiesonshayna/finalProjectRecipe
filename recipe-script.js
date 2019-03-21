@@ -1,7 +1,20 @@
+/*
+	Final Project Recipe Getter
+    Shayna Jamieson
+    Bridget Black
+    2019-03-09
+    Last Updated: 2019-03-20
+
+	File: recipe-script.js	
+
+    Associated File: index.html
+*/
+
 let calValidate = (lowCal, highCal) => {
     let btn = document.getElementById("checkout");
     btn.disabled = true;
 
+        //Low Cal validation
     if(lowCal<0 || isNaN(lowCal) || lowCal>highCal) {
         document.getElementById("calLow").classList = "errorInput";
         document.getElementById("errorInput1").classList = "errorSpan";
@@ -10,6 +23,7 @@ let calValidate = (lowCal, highCal) => {
         document.getElementById("errorInput1").classList = "hidden";
     }
     
+        //High Cal validation
     if(highCal<0 || highCal<lowCal || isNaN(highCal)) {
         document.getElementById("calHigh").classList = "errorInput";
         document.getElementById("errorInput2").classList = "errorSpan";
@@ -18,14 +32,16 @@ let calValidate = (lowCal, highCal) => {
         document.getElementById("errorInput2").classList = "hidden";
     }
 
+        //Re-enable checkout button
     if((highCal>0 && highCal>lowCal) && (lowCal>=0 && lowCal<highCal)) {
         btn.disabled = false;
     }
-}
+};
 
 let mealOptions = (buttons) => {
     let btn = document.getElementById("checkout");
 
+            //radio button validation
         let count = 0;
         for(var i in buttons) {
             if(buttons[i].checked === true) {
@@ -36,11 +52,13 @@ let mealOptions = (buttons) => {
             if(count===0) {
                 btn.disabled = true;
             }
-}
+};
 
 let mealTypes = (buttons) => {
     let btn = document.getElementById("checkout");
     let count = 0;
+    
+            //radio button validation
         for(var i in buttons) {
             if(buttons[i].checked === true) {
                 btn.disabled = false;
@@ -50,7 +68,7 @@ let mealTypes = (buttons) => {
             if(count===0) {
                 btn.disabled = true;
             }
-}
+};
 
 let values = () => {
     $.getJSON('recipieTry1.json', function(result){
@@ -82,6 +100,7 @@ let values = () => {
             // get the output so that it can be reused with just a variable
             let output = "<h3><strong>Recipe: "+choice.recipeName+"</strong><br><br>Directions:<br>"+choice.directions+"</h3>";
 
+                /* Breakfast */
             if(radioBFast.checked && choice.breakfast == "true") {
                 if(radioVegan.checked && validLowCal == true) {
                     if(choice.vegan == "true" && choice.lowCalories == "true")
@@ -132,6 +151,7 @@ let values = () => {
                         $('#results').append(output);
                 }
             }
+                /* Lunch */
             else if(radioLunch.checked && choice.lunch == "true") {
                 if(radioVegan.checked && validLowCal == true) {
                     if(choice.vegan == "true" && choice.lowCalories == "true")
@@ -182,6 +202,7 @@ let values = () => {
                         $('#results').append(output);
                 }
             }
+                /* Dinner */
             else if(radioDinner.checked && choice.dinner == "true") {
                 if(radioVegan.checked && validLowCal == true) {
                     if(choice.vegan == "true" && choice.lowCalories == "true")
@@ -234,23 +255,24 @@ let values = () => {
             }
         });
     });
-}
+};
 
-// $('.calories').on("mouseleave", event => {
-//   $(event.currentTarget) = calValidate(document.getElementById("calLow").value, document.getElementById("calHigh").value);
-// });
+    /* Validates low and high calorie inputs, disables checkout btn if not valid */
 $('#calInputs').on("mouseleave", function() {
     calValidate(document.getElementById("calLow").value, document.getElementById("calHigh").value);
 });
 
+    /* Validates radio btn inputs, disables checkout btn if not valid */
 $('#radioBtn').on('mouseleave', function() {
     mealOptions(document.getElementsByName("method"));
 });
 
+    /* Validates radio btn inputs, disables checkout btn if not valid */
 $('#mealBtn').on('mouseleave', function(){
     mealTypes(document.getElementsByName("mealType"));
 });
 
+    /* Runs selection from JSON file and output to div HTML */
 $('#checkout').on('click', function(){
     document.getElementById("results").innerHTML = "";
     values();
