@@ -10,34 +10,6 @@
     Associated File: index.html
 */
 
-let calValidate = (lowCal, highCal) => {
-    let btn = document.getElementById("checkout");
-    btn.disabled = true;
-
-        //Low Cal validation
-    if(lowCal<0 || isNaN(lowCal) || lowCal>highCal) {
-        document.getElementById("calLow").classList = "errorInput";
-        document.getElementById("errorInput1").classList = "errorSpan";
-    } else {
-        document.getElementById("calLow").classList.remove("errorInput");
-        document.getElementById("errorInput1").classList = "hidden";
-    }
-    
-        //High Cal validation
-    if(highCal<0 || highCal<lowCal || isNaN(highCal)) {
-        document.getElementById("calHigh").classList = "errorInput";
-        document.getElementById("errorInput2").classList = "errorSpan";
-    } else {
-        document.getElementById("calHigh").classList.remove("errorInput");
-        document.getElementById("errorInput2").classList = "hidden";
-    }
-
-        //Re-enable checkout button
-    if((highCal>0 && highCal>lowCal) && (lowCal>=0 && lowCal<highCal)) {
-        btn.disabled = false;
-    }
-};
-
 let mealOptions = (buttons) => {
     let btn = document.getElementById("checkout");
 
@@ -69,6 +41,35 @@ let mealTypes = (buttons) => {
                 btn.disabled = true;
             }
 };
+
+let calValidate = (lowCal, highCal) => {
+    let btn = document.getElementById("checkout");
+    btn.disabled = true;
+
+        //Low Cal validation
+    if(lowCal<0 || isNaN(lowCal) || lowCal>highCal) {
+        document.getElementById("calLow").classList = "errorInput";
+        document.getElementById("errorInput1").classList = "errorSpan";
+    } else {
+        document.getElementById("calLow").classList.remove("errorInput");
+        document.getElementById("errorInput1").classList = "hidden";
+    }
+    
+        //High Cal validation
+    if(highCal<0 || highCal<lowCal || isNaN(highCal)) {
+        document.getElementById("calHigh").classList = "errorInput";
+        document.getElementById("errorInput2").classList = "errorSpan";
+    } else {
+        document.getElementById("calHigh").classList.remove("errorInput");
+        document.getElementById("errorInput2").classList = "hidden";
+    }
+
+        //Re-enable checkout button
+    if((highCal>0 && highCal>lowCal) && (lowCal>=0 && lowCal<highCal)) {
+        btn.disabled = false;
+    }
+};
+
 
 let values = () => {
     $.getJSON('recipieTry1.json', function(result){
@@ -257,11 +258,6 @@ let values = () => {
     });
 };
 
-    /* Validates low and high calorie inputs, disables checkout btn if not valid */
-$('#calInputs').on("mouseleave", function() {
-    calValidate(document.getElementById("calLow").value, document.getElementById("calHigh").value);
-});
-
     /* Validates radio btn inputs, disables checkout btn if not valid */
 $('#radioBtn').on('mouseleave', function() {
     mealOptions(document.getElementsByName("method"));
@@ -270,6 +266,11 @@ $('#radioBtn').on('mouseleave', function() {
     /* Validates radio btn inputs, disables checkout btn if not valid */
 $('#mealBtn').on('mouseleave', function(){
     mealTypes(document.getElementsByName("mealType"));
+});
+
+    /* Validates low and high calorie inputs, disables checkout btn if not valid */
+$('#calInputs').on("mouseleave", function() {
+    calValidate(document.getElementById("calLow").value, document.getElementById("calHigh").value);
 });
 
     /* Runs selection from JSON file and output to div HTML */
