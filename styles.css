@@ -152,7 +152,7 @@ img {
 #headerImg, #bannerImg {
 	width: 150px;
 	border: none;
-	border-radius: none;
+	border-radius: 0%;
 }
 
 /* Reduce size of Egg image inside banner */
