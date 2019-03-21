@@ -83,7 +83,7 @@ let values = () => {
             if(userHighCal < 500) {
                 validLowCal = true;
             }
-            if(userHighCal > 500) {
+            if(userHighCal >= 500) {
                 validLowCal = false;
             }
             
